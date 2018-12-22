@@ -14,11 +14,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val second=Intent(this,TregActivity::class.java)
-        val third=Intent(this,RectActivity::class.java)
-        val fourth=Intent(this,CircleActivity::class.java)
+        val second = Intent(this, TregActivity::class.java)
+        val third = Intent(this, RectActivity::class.java)
+        val fourth = Intent(this, CircleActivity::class.java)
 
-        val figure = arrayOf("","Triangle", "Rectangle", "Circle")
+        val figure = arrayOf("", "Triangle", "Rectangle", "Circle")
 
         val adapter = ArrayAdapter(
             this, // Context
@@ -31,25 +31,24 @@ class MainActivity : AppCompatActivity() {
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
 
-                  when(position){
-                     1-> {
+                when (position) {
+                    1 -> {
 
-                          startActivity(second)
-                      }
-                      2-> {
+                        startActivity(second)
+                    }
+                    2 -> {
 
-                          startActivity(third)
-                      }
-                      3-> {
+                        startActivity(third)
+                    }
+                    3 -> {
 
-                          startActivity(fourth)
-                      }
-                  }
+                        startActivity(fourth)
+                    }
+                }
             }
 
 
